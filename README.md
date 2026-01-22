@@ -6,8 +6,10 @@ Google Agent Development Kit (ADK) Python development guide plugin for Claude Co
 
 - Comprehensive ADK Python development guide
 - 22 reference documents covering all ADK concepts
-- 30+ official sample agents with real-world examples
+- 40+ official sample agents from [google/adk-samples](https://github.com/google/adk-samples)
 - Keywords: `google-adk`, `adk-python`, `agent`, `gemini`, `multi-agent`, `tool`, `workflow`
+
+> **Size**: ~184MB (includes sample agents with dependencies)
 
 ## Installation
 
@@ -35,7 +37,9 @@ Quick reference covering:
 | **Components** | Context, Sessions, Memory, Callbacks, Artifacts, Events |
 | **Advanced** | Apps, Plugins, MCP, A2A Protocol, Streaming, Grounding |
 
-### Sample Agents (30+ examples)
+### Sample Agents (40+ examples, ~180MB)
+
+> **Note**: The `samples/` directory is a direct copy of the Python examples from the official [google/adk-samples](https://github.com/google/adk-samples) repository. This adds ~180MB to the plugin size. For the latest examples, refer to the [original repository](https://github.com/google/adk-samples/tree/main/python/agents).
 
 Official ADK sample agents organized by category:
 
