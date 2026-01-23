@@ -15,7 +15,7 @@
         "name": "Normalist-K",
         "email": "normalist.k@gmail.com"
       },
-      "source": ".",
+      "source": "./skills/adk-python",
       "category": "development",
       "homepage": "https://github.com/Normalist-K/adk-python-plugin"
     }
