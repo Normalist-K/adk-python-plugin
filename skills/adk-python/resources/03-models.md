@@ -36,20 +36,53 @@ from google.adk.agents import Agent
 
 agent = Agent(
     name="my_agent",
-    model="gemini-2.5-flash",  # Model ID string
+    model="gemini-2.5-flash",  # or "gemini-3-flash-preview" for latest
     instruction="Your instructions here.",
 )
 ```
 
 ### Available Models
 
+> **Model List**: https://ai.google.dev/gemini-api/docs/models
+
+#### Gemini 3 (Latest)
+
 | Model ID | Characteristics | Use Case |
 |----------|-----------------|----------|
-| `gemini-2.5-flash` | Speed/cost balance, 1M context | **General RAG (recommended)** |
-| `gemini-2.5-flash-lite` | Lowest cost, ultra-low latency | Simple tasks, cost optimization |
-| `gemini-2.5-pro` | Complex reasoning | Advanced analysis, math/coding |
-| `gemini-2.0-flash` | Stable production | Production reliability |
-| `gemini-2.0-flash-live-001` | Real-time streaming | Live API, voice |
+| `gemini-3-pro-preview` | Most intelligent, best reasoning | Complex analysis, coding, agentic |
+| `gemini-3-pro-image-preview` | Image generation + text | Visual content creation |
+| `gemini-3-flash-preview` | Balanced speed & intelligence | **General use (recommended)** |
+
+#### Gemini 2.5 (Stable)
+
+| Model ID | Characteristics | Use Case |
+|----------|-----------------|----------|
+| `gemini-2.5-flash` | Speed/cost balance, 1M context | **General RAG, agentic** |
+| `gemini-2.5-flash-lite` | Lowest cost, ultra-fast | High throughput, cost optimization |
+| `gemini-2.5-pro` | Advanced thinking, complex reasoning | Math, coding, STEM |
+
+#### Gemini 2.5 Specialized
+
+| Model ID | Characteristics | Use Case |
+|----------|-----------------|----------|
+| `gemini-2.5-flash-image` | Native image generation | Image + text output |
+| `gemini-2.5-flash-native-audio-preview-12-2025` | Live API, audio I/O | Real-time voice, streaming |
+| `gemini-2.5-flash-preview-tts` | Text-to-speech | Audio generation |
+| `gemini-2.5-pro-preview-tts` | High-quality TTS | Premium audio generation |
+
+#### Model Capabilities Comparison
+
+| Capability | 3 Pro | 3 Flash | 2.5 Flash | 2.5 Pro |
+|------------|-------|---------|-----------|---------|
+| Input Context | 1M | 1M | 1M | 1M |
+| Output Tokens | 65K | 65K | 65K | 65K |
+| Function Calling | ✓ | ✓ | ✓ | ✓ |
+| Code Execution | ✓ | ✓ | ✓ | ✓ |
+| Search Grounding | ✓ | ✓ | ✓ | ✓ |
+| Thinking | ✓ | ✓ | ✓ | ✓ |
+| URL Context | ✓ | ✓ | ✓ | ✓ |
+| Caching | ✓ | ✓ | ✓ | ✓ |
+| Image Gen | Pro-Image only | ✗ | Flash-Image only | ✗ |
 
 ### Generation Config
 
@@ -379,20 +412,24 @@ agent = Agent(
 
 | Use Case | Recommended Model |
 |----------|-------------------|
-| General RAG | `gemini-2.5-flash` |
-| Complex reasoning | `gemini-2.5-pro` or `claude-sonnet-4` |
+| General RAG | `gemini-3-flash-preview` or `gemini-2.5-flash` |
+| Complex reasoning | `gemini-3-pro-preview` or `gemini-2.5-pro` |
+| Agentic / Vibe coding | `gemini-3-pro-preview` |
 | Cost optimization | `gemini-2.5-flash-lite` |
+| Image generation | `gemini-3-pro-image-preview` or `gemini-2.5-flash-image` |
+| Real-time voice | `gemini-2.5-flash-native-audio-preview-12-2025` |
+| Text-to-speech | `gemini-2.5-flash-preview-tts` |
 | Local/private | `ollama/llama3.1` |
-| Real-time voice | `gemini-2.0-flash-live-001` |
 | Enterprise | Vertex AI models |
 
 ### By Priority
 
 | Priority | Recommendation |
 |----------|----------------|
-| Speed | `gemini-2.5-flash`, `gemini-2.5-flash-lite` |
-| Quality | `gemini-2.5-pro`, `claude-opus-4` |
+| Intelligence | `gemini-3-pro-preview`, `claude-opus-4` |
+| Speed | `gemini-3-flash-preview`, `gemini-2.5-flash-lite` |
 | Cost | `gemini-2.5-flash-lite`, local models |
+| Stability | `gemini-2.5-flash`, `gemini-2.5-pro` (stable) |
 | Privacy | Ollama, vLLM (self-hosted) |
 
 ---
