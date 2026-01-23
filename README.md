@@ -20,7 +20,7 @@ Claude Code 세션 내에서 다음 명령어를 실행하세요:
 /plugin marketplace add Normalist-K/adk-python-plugin
 
 # 2. 플러그인 설치
-/plugin install adk-python@adk-python
+/plugin install adk-python@adk-python-plugin
 
 # 3. 설치 확인
 /plugin list
