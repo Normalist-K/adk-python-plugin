@@ -13,21 +13,17 @@ Google Agent Development Kit (ADK) Python development guide plugin for Claude Co
 
 ## Installation
 
-### Option 1: Marketplace (Recommended)
+Claude Code 세션 내에서 다음 명령어를 실행하세요:
 
 ```bash
-# 1. Add marketplace
+# 1. 마켓플레이스 추가
 /plugin marketplace add Normalist-K/adk-python-plugin
 
-# 2. Install plugin
+# 2. 플러그인 설치
 /plugin install adk-python@adk-python
-```
 
-### Option 2: Direct Install
-
-```bash
-# Install using Claude Code CLI
-claude plugins install Normalist-K/adk-python-plugin
+# 3. 설치 확인
+/plugin list
 ```
 
 ## What's Included
