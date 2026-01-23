@@ -1,0 +1,30 @@
+# Media files (reduce repo size)
+*.gif
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.pdf
+*.mp3
+*.mp4
+*.wav
+
+# Binary files
+*.bin
+*.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
