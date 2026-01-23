@@ -1,10 +1,11 @@
 {
   "name": "adk-python",
   "version": "1.0.0",
-  "description": "Google ADK Python development guide with 30+ sample agents",
+  "description": "Google ADK Python development guide with 40+ sample agents",
   "author": {
     "name": "Normalist-K"
   },
   "repository": "https://github.com/Normalist-K/adk-python-plugin",
-  "keywords": ["google-adk", "adk-python", "agent", "gemini", "multi-agent", "tool", "workflow"]
+  "keywords": ["google-adk", "adk-python", "agent", "gemini", "multi-agent", "tool", "workflow"],
+  "skills": "./skills/adk-python"
 }
