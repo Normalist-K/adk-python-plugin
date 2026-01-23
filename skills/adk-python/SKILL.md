@@ -46,6 +46,22 @@ Google ADK is a **framework for building, evaluating, and deploying AI agents**.
 | `LoopAgent` | Iterative execution | Retry, quality improvement |
 | `CustomAgent` | BaseAgent inheritance | Complex conditional logic |
 
+### Multi-Agent Patterns (핵심)
+
+> **중요**: Multi-agent 시스템 구현 시 반드시 참고해야 할 8가지 디자인 패턴입니다.
+> 상세 내용: [23-multi-agent-patterns.md](resources/23-multi-agent-patterns.md)
+
+| Pattern | Agent Type | Use Case |
+|---------|------------|----------|
+| Sequential Pipeline | `SequentialAgent` | 단계별 파이프라인 |
+| Coordinator/Dispatcher | `Agent` + sub_agents | 의도 분석 후 라우팅 |
+| Parallel Fan-Out/Gather | `ParallelAgent` | 병렬 처리 후 통합 |
+| Hierarchical Decomposition | `AgentTool` | 서브태스크 위임 |
+| Generator/Critic | `LoopAgent` | 생성-검증 반복 |
+| Iterative Refinement | `LoopAgent` | 점진적 품질 개선 |
+| Human-in-the-Loop | Custom Tool | 인간 승인 필요 |
+| Composite | Mixed | 패턴 조합 |
+
 ---
 
 ## Quick Start
@@ -216,11 +232,20 @@ Detailed information in reference files:
 - Google Search Grounding
 - Vertex AI Search Grounding
 
+#### [23-multi-agent-patterns.md](resources/23-multi-agent-patterns.md) ⭐
+- **8 Design Patterns for Multi-Agent Systems**
+- Sequential, Coordinator, Parallel, Hierarchical
+- Generator/Critic, Iterative Refinement
+- Human-in-the-Loop, Composite Patterns
+
 ---
 
 ## Sample Agents (Best Practices)
 
-Official ADK sample agents with 30+ real-world examples.
+Official ADK sample agents with 40+ real-world examples.
+
+> **Note**: 아래 샘플들은 [Multi-Agent Patterns](resources/23-multi-agent-patterns.md)를 기반으로 구현되어 있습니다.
+> 패턴을 먼저 이해한 후 샘플을 참고하면 더 효과적입니다.
 
 - **Local Path**: [samples/python/agents/](samples/python/agents/)
 - **Examples List**: [samples/python/agents/README.md](samples/python/agents/README.md)
